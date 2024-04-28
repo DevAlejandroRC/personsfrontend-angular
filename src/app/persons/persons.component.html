@@ -1,0 +1,18 @@
+<div style="text-align: center;">
+    <button style="cursor: pointer;" (click)="toGoAdd()">+</button>
+</div>
+
+<div class="box">
+    <div class="item" *ngFor="let person of persons">
+        <ul>
+            <li>
+                <a [routerLink]="['/persons', person.idperson]" >
+                    {{person.name}}
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!--Incrutar componete formulario-->
+<router-outlet></router-outlet>
